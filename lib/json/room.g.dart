@@ -12,10 +12,10 @@ Room _$RoomFromJson(Map<String, dynamic> json) {
     name: json['name'] as String,
     description: json['description'] as String,
     imageUrl: json['imageUrl'] as String,
-    exitIds: (json['exitIds'] as List<dynamic>)
-        ?.map((dynamic e) => e as String)
-        ?.toList(),
-  );
+    exitIds: (json['exitIds'] as List)?.map((e) => e as String)?.toList(),
+  )..world = json['world'] == null
+      ? null
+      : World.fromJson(json['world'] as Map<String, dynamic>);
 }
 
 Map<String, dynamic> _$RoomToJson(Room instance) => <String, dynamic>{
@@ -23,5 +23,6 @@ Map<String, dynamic> _$RoomToJson(Room instance) => <String, dynamic>{
       'name': instance.name,
       'description': instance.description,
       'imageUrl': instance.imageUrl,
+      'world': instance.world,
       'exitIds': instance.exitIds,
     };

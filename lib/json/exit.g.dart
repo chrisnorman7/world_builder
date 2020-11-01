@@ -12,6 +12,7 @@ Exit _$ExitFromJson(Map<String, dynamic> json) {
     name: json['name'] as String,
     description: json['description'] as String,
     imageUrl: json['imageUrl'] as String,
+    destinationId: json['destinationId'] as String,
   );
 }
 
@@ -20,4 +21,5 @@ Map<String, dynamic> _$ExitToJson(Exit instance) => <String, dynamic>{
       'name': instance.name,
       'description': instance.description,
       'imageUrl': instance.imageUrl,
+      'destinationId': instance.destinationId,
     };

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'widgets/world_widget.dart';
+import 'widgets/worlds_widget.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -17,6 +17,6 @@ void main() {
       // is not restarted.
       primarySwatch: Colors.blue,
     ),
-    home: WorldWidget(),
+    home: WorldsWidget(),
   ));
 }
